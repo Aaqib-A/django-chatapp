@@ -143,9 +143,11 @@ import os
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [ 
-    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'static_files'),
+    os.path.join(BASE_DIR, 'templates'),
+    os.path.join(BASE_DIR, 'rt_chat/templates'),
 ]
-STATIC_ROOT = os.path.join(BASE_DIR, 'collected_static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media' 
