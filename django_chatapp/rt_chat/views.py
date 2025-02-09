@@ -10,7 +10,6 @@ def chat_view(request):
     chat_group = get_object_or_404(ChatGroup, group_name="public-chat")
     chat_messages = chat_group.chat_message.all()[:30]
     form = ChatMessageCreateForm()
-    print(form)
 
     # if request.request == "POST":
     if request.htmx:

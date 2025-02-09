@@ -1,11 +1,9 @@
 
 
-## Youtube Tutorial
-https://www.youtube.com/watch?v=Q7N2oJTnThA&list=PL5E1F5cTSTtRSP3Qb8-gZ-Hm5AXp3VKvu&index=2
+#### [Youtube Tutorial](https://www.youtube.com/watch?v=668OIdxjxJo&list=PL5E1F5cTSTtRSP3Qb8-gZ-Hm5AXp3VKvu&index=4)
 
-## Django Starter
-https://github.com/andyjud/django-starter/blob/main/requirements.txt
 
+#### [Django Starter](https://github.com/andyjud/django-starter/blob/main/requirements.txt)
 
 
 

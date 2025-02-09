@@ -33,6 +33,8 @@ CSRF_TRUSTED_ORIGINS = ['https://*']
 # Application definition
 
 INSTALLED_APPS = [
+    'daphne', # Websocket app that need to be installed on the top
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -91,7 +93,14 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'django_chatapp.wsgi.application'
+# WSGI_APPLICATION = 'django_chatapp.wsgi.application'
+ASGI_APPLICATION = 'django_chatapp.asgi.application'
+
+CHANNEL_LAYERS = {
+    'default':{
+        "BACKEND": "channels.layers.InMemoryChannelLayer"
+    }
+}
 
 
 # Database

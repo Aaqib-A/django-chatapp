@@ -6,3 +6,6 @@ pillow==10.4.0
 django-cleanup==9.0.0
 django-allauth==64.2.1
 django-htmx==1.19.0
+
+
+channels[daphne]
