@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Django Template">
-    <title>Django ChatApp</title>
+    <title>Project Title</title>
     <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}">
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
     <script src="https://unpkg.com/htmx.org@2.0.2"></script>
@@ -24,12 +24,17 @@
         h2 {
             @apply text-xl font-bold mb-2
         }
+    	h3 {
+            @apply text-lg font-bold
+        }
         p {
             @apply mb-4
         }
         .button, button, [type='submit'], [type='button'] {
-            @apply bg-indigo-600 text-white font-bold px-6 py-4 inline-block 
-            rounded-lg shadow-lg transition-all cursor-pointer
+            @apply bg-indigo-600 text-white font-bold rounded-lg shadow-lg transition-all cursor-pointer
+        }
+        .button, button a, [type='submit'], [type='button'] {
+            @apply px-6 py-4 inline-block 
         }
         .button:hover, button:hover, [type='submit']:hover, [type='button']:hover {
             @apply bg-indigo-700

@@ -25,8 +25,9 @@ SECRET_KEY = 'django-insecure-5)w&#enjo7o0s+d08_xm9$(3)g(4sup!0tx^swkhsq=g=q21jr
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
-CSRF_TRUSTED_ORIGINS = [ 'https://*' ]
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '*']
+
+CSRF_TRUSTED_ORIGINS = ['https://*']
 
 
 # Application definition
@@ -45,11 +46,10 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'django_htmx',
-    
-    'a_home',
-    'users',
 
     # Our Apps
+    'a_home',
+    'users',
     'rt_chat',
 ]
 
@@ -78,7 +78,7 @@ ROOT_URLCONF = 'django_chatapp.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [ BASE_DIR / 'templates' ],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -139,15 +139,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-import os
 
 STATIC_URL = 'static/'
-STATICFILES_DIRS = [ 
-    os.path.join(BASE_DIR, 'static_files'),
-    os.path.join(BASE_DIR, 'templates'),
-    os.path.join(BASE_DIR, 'rt_chat/templates'),
-]
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATICFILES_DIRS = [BASE_DIR / 'static']
 
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media' 
@@ -164,4 +158,3 @@ ACCOUNT_SIGNUP_REDIRECT_URL = "{% url 'account_signup' %}?next={% url 'profile-o
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_EMAIL_REQUIRED = True
-
