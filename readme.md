@@ -1,6 +1,6 @@
 
 
-#### [Youtube Tutorial](https://www.youtube.com/watch?v=668OIdxjxJo&list=PL5E1F5cTSTtRSP3Qb8-gZ-Hm5AXp3VKvu&index=4)
+#### [Youtube Tutorial](https://www.youtube.com/watch?v=4kJKq1bZSwo&list=PL5E1F5cTSTtRSP3Qb8-gZ-Hm5AXp3VKvu&index=6)
 
 
 #### [Django Starter](https://github.com/andyjud/django-starter/blob/main/requirements.txt)
@@ -55,4 +55,22 @@ print(get_random_secret_key())
 exit()
 ```
 
+## Docker
+**To deploy the project on Server**
+```
+sudo docker-compose -f docker/docker-compose-db.yml up -d
+```
 
+**Extra Commands**
+```
+sudo docker ps -a
+sudo docker images
+sudo docker volume ls
+sudo docker network ls
+
+sudo docker stop chatapp-backend chatapp-redis
+sudo docker rm chatapp-backend chatapp-redis
+sudo docker rmi img_chatapp-backend:latest # postgres:13
+sudo docker network rm chatapp-network
+sudo docker volume rm docker_chatapp-redis
+```
