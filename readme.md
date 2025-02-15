@@ -1,6 +1,6 @@
 
 
-#### [Youtube Tutorial](https://www.youtube.com/watch?v=4kJKq1bZSwo&list=PL5E1F5cTSTtRSP3Qb8-gZ-Hm5AXp3VKvu&index=6)
+#### [Youtube Tutorial](https://www.youtube.com/watch?v=mfpzFemewDQ&list=PL5E1F5cTSTtRSP3Qb8-gZ-Hm5AXp3VKvu&index=7)
 
 
 #### [Django Starter](https://github.com/andyjud/django-starter/blob/main/requirements.txt)
