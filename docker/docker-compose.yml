@@ -1,0 +1,50 @@
+version: '3.8'
+
+services:
+  img_chatapp-backend:
+    build:
+      context: ../  # Adjust the context to point to the correct location
+      dockerfile: ./docker/Dockerfile
+    volumes:
+      - ../django_chatapp:/app
+    ports:
+      - "8000:8000"
+    # env_file:
+    #   - ../django_chatapp/.env
+    environment:
+      # POSTGRES_HOST: img_chatapp-db
+      REDIS_HOST: img_chatapp-redis
+    image: img_chatapp-backend:latest
+    container_name: chatapp-backend
+    depends_on:
+      # - img_chatapp-db
+      - img_chatapp-redis
+    networks:
+      - chatapp-network
+
+  # img_chatapp-db:
+  #   image: postgres:13
+  #   volumes:
+  #     - chatapp-db:/var/lib/postgresql/data
+  #   ports:
+  #     - "5432:5432"
+  #   env_file:
+  #     - ../django_chatapp/.env
+  #   container_name: chatapp-db
+  #   networks:
+  #     - chatapp-network
+
+  img_chatapp-redis:
+    image: redis:latest
+    container_name: chatapp-redis
+    # restart: always
+    ports:
+      - "6379:6379"
+    networks:
+      - chatapp-network
+
+# volumes:
+#   chatapp-db:
+
+networks:
+  chatapp-network:
