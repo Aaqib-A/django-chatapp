@@ -54,6 +54,14 @@ python manage.py runserver
 
 <br>
 
+#### - Create 2 CharGroups
+- Navigate to localhost:8000/admin
+- goto 'Chat Groups' and click on 'Add'
+- Create 2 chatgroups
+    - public-chat
+    - online-status
+
+
 #### - Generate Secret Key ( ! Important for deployment ! )
 ```
 python manage.py shell
