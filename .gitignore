@@ -1,6 +1,7 @@
 /chatapp-env
 */collected_static
 */static
+*/media
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
